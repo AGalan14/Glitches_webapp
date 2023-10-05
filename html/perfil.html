@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Perfil de personaje | Glitches</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="application-name" content="Glitches">
+        <link rel="icon" sizes="512x512" href="../img/glitchesIcon.png">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <link rel="stylesheet" href="../css/mystyles.css">
+        <script src="../js/profileScript.js"></script>
+        <script src="../js/menuScript.js"></script>
+    </head>
+    <body onload="displayProfile()">
+
+
+
+        <!-- MENU PRINCIPAL -->
+
+        <!-- Icon Bar (Sidebar - hidden on small screens) -->
+        <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+        <!-- Avatar image in top left corner -->
+        <img src="../img/glitchesLogo.png" style="width:100%">
+        <a href="../html/index.html" class="w3-bar-item w3-button w3-padding-large" id="myNavbarItems">
+            <i class="fa-solid fa-house" id="menuIcon"> | Inicio</i>
+        </a>
+        <a href="../html/informacion.html" class="w3-bar-item w3-button w3-padding-large" id="myNavbarItems">
+            <i class="fa-solid fa-circle-info" id="menuIcon"> | Informacion</i>
+        </a>
+        <a href="../html/perfil.html" class="w3-bar-item w3-button w3-padding-large" id="myNavbarItems">
+            <i class="fa-solid fa-id-card" id="menuIcon"> | Perfil</i>
+        </a>
+        <a href="../html/personajes.html" class="w3-bar-item w3-button w3-padding-large" id="myNavbarItems">
+            <i class="fa-solid fa-users" id="menuIcon"> | Personajes</i>
+        </a>
+        <a href="../html/misiones.html" class="w3-bar-item w3-button w3-padding-large" id="myNavbarItems">
+            <i class="fa-solid fa-location-crosshairs" id="menuIcon"> | Misiones</i>
+        </a>
+        <a href="../html/mapa.html" class="w3-bar-item w3-button w3-padding-large" id="myNavbarItems">
+            <i class="fa-solid fa-link" id="menuIcon"> | Mapa</i>
+        </a>
+        </nav>
+
+        <!-- Navbar on small screens (Hidden on medium and large screens) -->
+        <div class="w3-top w3-hide-large w3-hide-medium">
+        <div class="w3-bar w3-opacity w3-hover-opacity-off w3-center w3-small" id="myMobileNavbar">
+            <div class="topnav" id="myTopnav">
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <a href="../html/index.html" id="myNavbarItems">
+                    <i class="fa-solid fa-house" id="menuIcon"> | Inicio</i>
+                </a>
+                <a href="../html/informacion.html" id="myNavbarItems">
+                    <i class="fa-solid fa-circle-info" id="menuIcon"> | Informacion</i>
+                </a>
+                <a href="../html/perfil.html" class="active" id="myNavbarItems">
+                    <i class="fa-solid fa-id-card" id="menuIcon"> | Perfil</i>
+                </a>
+                <a href="../html/personajes.html" id="myNavbarItems">
+                    <i class="fa-solid fa-users" id="menuIcon"> | Personajes</i>
+                </a>
+                <a href="../html/misiones.html" id="myNavbarItems">
+                    <i class="fa-solid fa-location-crosshairs" id="menuIcon"> | Misiones</i>
+                </a>
+                <a href="../html/mapa.html" id="myNavbarItems">
+                    <i class="fa-solid fa-link" id="menuIcon"> | Mapa</i>
+                </a>
+            </div>
+        </div>
+        </div>
+
+        <!-- MENU PRINCIPAL -->
+
+
+
+        <!-- Page Content -->
+        <div class="w3-padding-large" id="main">
+            <header class="w3-container w3-padding-32 w3-center" id="home">
+                <h1> Personaliza tu personaje </h1>
+                <br><br>
+                <img src="../img/pfp.png" class="char-image" width="150px">
+                <br><br>
+                Nombre
+                <form name="Login" onsubmit="return validateForm()">
+
+                <input type="text" name="fName" id="FN" style="border-radius: 8px; text-align: center; width: fit-content;"> <br>
+
+                Edad <br>
+                <input type="number" min="1" max="99" name="ageField" id="age" style="border-radius: 8px; text-align: center;"> <br>
+                <br>
+                <br>
+                <input onclick="UpdateProfile();" type="submit" name="sub" value="Guardar" style="border-radius: 8px;">
+
+                </form>
+            </header>
+        </div>
+    </body>
+</html>
